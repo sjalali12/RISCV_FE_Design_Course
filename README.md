@@ -24,6 +24,10 @@ The command used in Linux terminal to compile the C code:
   riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o \<objfilename>.o \<codefilename>.c
   
 We have used two modes of optimization for compilation namely, -O1 and -Ofast. -Ofast mode performs greater level of optimization while conversion of C to assembly.
+To view the compiled assembly code, use this command:
+
+riscv64-unknown-elf-objdump -d \<objfilename>.o | less
+
 
 ## Day 2 - Application Binary Interface (ABI) and Verification flow
 
@@ -32,9 +36,5 @@ We have used two modes of optimization for compilation namely, -O1 and -Ofast. -
 ## Day 4 - Basic RISC-V CPU design with TLV
 
 ## Day 5 - Pipelined RISC-V CPU Microarchitecture design
-
-To view the compiled assembly code, use this command:
-
-riscv64-unknown-elf-objdump -d sum1ton.o | less
 
 
