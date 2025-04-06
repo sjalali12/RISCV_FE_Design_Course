@@ -14,16 +14,24 @@ Day 3 - Digital Logic with TL-Verilog and Makerchip
 Day 4 - Basic RISC-V CPU design with TLV
 Day 5 - Pipelined RISC-V CPU Microarchitecture design
 
-# Day 1 - Introduction to RISC-V, GNU Compiler Toolchain and SPIKE 
+## Day 1 - Introduction to RISC-V, GNU Compiler Toolchain and SPIKE 
 RISC-V is open-source in its Instructioin Set Architecture(ISA). It supports higher flexibility for custom processor designs. 
 RV32I stands for RISC-V 32-bit Integer, which is the base-ISA. 
 
 RISC-V GNU Compiler Toolchain includes the RISC-V C and C++ cross-compiler which allows to compile in RISC-V ISA and run on SPIKE simulator.
 
 The command used in Linux terminal to compile the C code:
-  riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o <objfilename>.o <codefilename>.c
+  riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o \<objfilename>.o \<codefilename>.c
   
 We have used two modes of optimization for compilation namely, -O1 and -Ofast. -Ofast mode performs greater level of optimization while conversion of C to assembly.
+
+## Day 2 - Application Binary Interface (ABI) and Verification flow
+
+## Day 3 - Digital Logic with TL-Verilog and Makerchip
+
+## Day 4 - Basic RISC-V CPU design with TLV
+
+## Day 5 - Pipelined RISC-V CPU Microarchitecture design
 
 To view the compiled assembly code, use this command:
 
