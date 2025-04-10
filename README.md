@@ -16,9 +16,13 @@ Front-End (FE) semiconductor design and aim to prepare further for SoC, IP modul
 
 ## Course Agenda
 Day 1 - Introduction to RISC-V, ISA and its related GNU-TOOLCHAIN for compiling; and SPIKE simulator for checking.
+
 Day 2 - Application Binary Interface (ABI) and Verification flow
+
 Day 3 - Digital Logic with TL-Verilog and Makerchip
+
 Day 4 - Basic RISC-V CPU design with TLV
+
 
 Day 5 - Pipelined RISC-V CPU Microarchitecture design
 
@@ -81,8 +85,29 @@ And further,
 In the context of Makerchip and TL-Verilog (TLV) programming, "shell" refers to the automated scripts (likely using make or bash) that convert TLV code into a format that can be run on an actual FPGA, specifically supporting Xilinx boards with Vivado software. 
 
 •	Shell Scripts:  These scripts automate the process of taking TL-Verilog code and transforming it into a format that can be synthesized and implemented on a physical FPGA. 
+
 •	EDA Flows:  Makerchip Flows aims at developing EDA (Electronic Design Automation) flows for TL-Verilog leveraging Edalize backend, for open source tools/flows like yosys, Openlane, F4PGA, Silicon Compiler, and also commercial ASIC Synthesis and Simulation tools. 
+
 •	Current Support:  The shell script currently supports Xilinx boards with Vivado software. 
+
+The CPU is like a magic team of hardware components designed in TL-Verilog to implement an execution platform for a specified target Instruction Set as per an ISA.  Here are the major components we put together:
+
+1. Program Counter (PC) - This special register in a CPU (known since the days of the 8-bit Intel 8085 SBC) tracks the memory address of the next instruction to fetch+execute. It is incremented sequentially to the next instruction in the instr-memory, unless overwritten by the calculations of a Branch type instruction.
+
+2. Instruction Decoder - The instruction decoder interprets the binary representation of the op-code part of the instruction to govern the operation of other components in the CPU to execute the instruction.
+
+3. Instruction Memory - This storage holds the binary machine instructions of a program. It is typically read-only (at the system software level, and by op-codes) -- writable only by the CPU hardware circuits. (it seems - technically, it is a RAM). 
+
+4. Data Memory - This storage component stores data to be manipulated by instructions in program execution. The right op-codes can read and write on this. It holds variables, data arrays, and other items that the program uses in execution.
+
+5. ALU (Arithmetic Logic Unit) - The ALU is a fundamental digital circuit within the CPU that performs arithmetic and logic operations like comparisons and bitwise operations (AND, OR, XOR and their NOTs)). The ALU-generated results are used in various computations specified by the instructions.
+
+6. Register File – Called RF in the course/ videos, RF is a set of registers used to hold data during the execution of instructions. Each instruction specifies which registers are involved for read or write involved in the Instruction.  The data from these registers can be used as operands for operations performed by the ALU or other components.
+   
+Contrary to early feeling by some students, there is a single RF, not separate ones for read or write.  The RF  serves as the primary storage for data during program execution, allowing both read and write operations, through separate read and write ports, it's a single, unified memory unit that supports storing and retrieving of data, 
+The RF ensures that the updated data is available for subsequent instructions.
+All the above components truly collaborate to execute machine instructions in a CPU. The PC guides the steps to fetch the next instruction, which is then interpreted by the Decoder, the ALU performs computations, the registers in RF hold data, and the memory components provide data storage and access. 
+The resulting CPU is like an orchestra that plays out the task executions required by a program's instructions.
 
 
 ## Day 5 - Pipelined RISC-V CPU Microarchitecture design
