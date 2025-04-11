@@ -23,7 +23,6 @@ Day 3 - Digital Logic with TL-Verilog and Makerchip
 
 Day 4 - Basic RISC-V CPU design with TLV
 
-
 Day 5 - Pipelined RISC-V CPU Microarchitecture design
 
 ## Day 1 - Introduction to RISC-V, GNU Compiler Toolchain and SPIKE 
@@ -73,13 +72,13 @@ This introduces the Makerchip shell, and covers the Basic and advanced types of 
 ![image](https://github.com/user-attachments/assets/97700835-d0ad-44d7-b9cd-dfbe9f1b0339)
 
 The basic 7 types of Logic gates and their Truth Tables:
-![image](https://github.com/user-attachments/assets/e1c33408-5b73-4b0e-b874-5423dc4991b6)
+// ![image](https://github.com/user-attachments/assets/e1c33408-5b73-4b0e-b874-5423dc4991b6)
+
+<img src="https://github.com/user-attachments/assets/e1c33408-5b73-4b0e-b874-5423dc4991b6" alt="1-Cycle RISC-V CPU" style="width:50%; height:auto;">
 
 Ex one of the basic building blocks of combinational logic is a 2 bit adder.  It can be used as a block to make a larger circuits (a.k. ckts).
 
-![image](https://github.com/user-attachments/assets/183e1b2b-8cfd-4572-a48a-db1438e53807)
-
-<img src="https://github.com/user-attachments/assets/183e1b2b-8cfd-4572-a48a-db1438e53807" alt="Logic Block: 2 bit adder" style="width:25%; height:auto;">
+<img src="https://github.com/user-attachments/assets/183e1b2b-8cfd-4572-a48a-db1438e53807" alt="Logic Block: 2 bit adder" style="width:50%; height:auto;">
 
 ## Day 4 - Basic RISC-V CPU design with TLV
 
@@ -88,7 +87,8 @@ Also makes deeper use of the Makerchip shell and the concepts learnt in earlier 
 
 Micro-architecture of Single Cycle RISC-V CPU is designed as:
 
-![image](https://github.com/user-attachments/assets/28cadc4b-903e-484a-ae8c-9af443332a45 =100x200)
+// ![image](https://github.com/user-attachments/assets/28cadc4b-903e-484a-ae8c-9af443332a45 =100x200)
+<img src="https://github.com/user-attachments/assets/28cadc4b-903e-484a-ae8c-9af443332a45" alt="1-Cycle RISC-V CPU" style="width:50%; height:auto;">
 
 And further,
 ![image](https://github.com/user-attachments/assets/30002149-958f-4e12-9c06-66dafa7fce69 =100x200)
