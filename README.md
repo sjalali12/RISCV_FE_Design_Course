@@ -46,8 +46,19 @@ riscv64-unknown-elf-objdump -d \<objfilename>.o | less
 Data Type representations and format specifiers
 ![image](https://github.com/user-attachments/assets/11cc3a62-c639-49e1-ae8c-f208a3f0d6e6 =100x200)
 
-The instruction Set Architecture exposes at two levels - User ISA and System ISA.  Both are used by the OS.
-The applications and user programs can only use the User ISA whereas the OS provides suitable wrapper or specializedinterfaces that shield the raw System ISA from harm.
+** instruction Set Architecture (ISA) **
+
+The ISA is an abstract interface & architectural model of the hardware (CPU) that specifies both what the processor is capable of; as well as how it gets done.
+
+The ISA provides the only way for a user (can be system calls made by OS or by Programs) to interact with the hardware level machine instructions. It works as a programmer’s reference because it’s what is visible to the assembly language programmer, the compiler writer, and the application programmer.
+
+The ISA defines the supported data types, registers, how the main memory is managed,  which instructions a microprocessor can execute, and the input/ output model of multiple ISA implementations. 
+The ISA can be extended / customized by adding instructions or other capabilities, or by adding support for larger addresses and data values.
+
+The ISA exposes at two levels - User ISA and System ISA.  Both are used by the OS.
+The applications and user programs can only use the User ISA whereas the OS provides suitable wrapper or specialized interfaces that shield the raw System ISA from harm.
+
+** Registers and Addressing **
 
 RISC-V utilizes the Little-Endian memory addressing architecture at the hardware abstraction level.
 
@@ -64,10 +75,11 @@ This introduces the Makerchip shell, and covers the Basic and advanced types of 
 The basic 7 types of Logic gates and their Truth Tables:
 ![image](https://github.com/user-attachments/assets/e1c33408-5b73-4b0e-b874-5423dc4991b6)
 
-Ex one of the basic building blocks of combinational logic is  2 bit adder.  It can be used as a block to make a larger circuits (abbrev. Used as ckt).
+Ex one of the basic building blocks of combinational logic is a 2 bit adder.  It can be used as a block to make a larger circuits (a.k. ckts).
 
 ![image](https://github.com/user-attachments/assets/183e1b2b-8cfd-4572-a48a-db1438e53807)
 
+<img src="https://github.com/user-attachments/assets/183e1b2b-8cfd-4572-a48a-db1438e53807" alt="Logic Block: 2 bit adder" style="width:25%; height:auto;">
 
 ## Day 4 - Basic RISC-V CPU design with TLV
 
@@ -107,6 +119,7 @@ The CPU is like a magic team of hardware components designed in TL-Verilog to im
 Contrary to early feeling by some students, there is a single RF, not separate ones for read or write.  The RF  serves as the primary storage for data during program execution, allowing both read and write operations, through separate read and write ports, it's a single, unified memory unit that supports storing and retrieving of data, 
 The RF ensures that the updated data is available for subsequent instructions.
 All the above components truly collaborate to execute machine instructions in a CPU. The PC guides the steps to fetch the next instruction, which is then interpreted by the Decoder, the ALU performs computations, the registers in RF hold data, and the memory components provide data storage and access. 
+
 The resulting CPU is like an orchestra that plays out the task executions required by a program's instructions.
 
 
@@ -114,12 +127,44 @@ The resulting CPU is like an orchestra that plays out the task executions requir
 
 Final practicals cover the following:
 •	Pipelining of RISC-V CPU Design
+
 •	Create 3-Cycle RISC-V - valid & Invalid cycles
+
 •	Modify 3-Cycle RISC-V to distribute Logic
+
 •	Types of pipeline hazards, and their solutions
+
 •	Coding a complete ALU
+
 •	Load/ Store instructions and adding them to a test program
+
 •	Control Logic for jump instructions
+
 •	Wrap-up
+
+** Advanced Directions ** 
+1.	CLOUD FPGA
+2.	FRAMEWORK FOR INTEGRATING CLOUD FPGAs as Accelerators for Web and Cloud Applications. 
+3.	Advanced capabilities in TLV
+5.	Intricacies of Timing Abstract Model -->  relates to powerful capabilities of re-pipelining your DESIGN; 
+     Fe.g. we took a 1-Cyc CPU and then Pipelined it - not do-able with the usual RTL Methodology.
+6.	Constructs for Design Hierarchy Replication e.g. a particular construct for State. 
+7.	TRANSACTIONs going thru Pipelines, can take more interesting Flows thru microARCH -- like many-CORE RISCV,  messages between COREs.
+8.	WARP-V and its cloud FPGAs;  Framework called FirstCLaaS.
+
+
+** Acknowledgement ** 
+1.	Kunal Ghosh, VSD Corp. Pvt. Ltd.
+2.	Bala Dhinesh, Engineer Tenstorrent (via Github link included in Makerchip template).
+3.	Steve Hoover, Founder of Redwood EDA, LLC
+
+** References ** 
+1.	https://gcc.gnu.org/onlinedocs/gcc/RISC-V-Options.html
+2.	https://www.arm.com/glossary/isa
+3.	https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf
+4.	https://www.tutorialspoint.com/unsigned-and-signed-binary-numbers
+5.	https://github.com/shivanishah269/risc-v-core
+6.	https://github.com/RISCV-MYTH-WORKSHOP/RISC-V-CPU-Core-using-TL-Verilog
+7.	https://github.com/stevehoover/RISC-V_MYTH_Workshop
 
 
