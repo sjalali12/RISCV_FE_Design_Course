@@ -4,7 +4,7 @@ RISC-V MYTH stands for "Microprocessor for You in Thirty Hours", a Workshop by [
 
 This workshop promotes and evangelizes the RISC-V open-source-ISA chip-design ecosystem, through the use of TL-Verilog and [makerchip.com](Makerchip). 
 
-![makerchip_ide](https://github.com/user-attachments/assets/672c7cec-d992-4bcf-8585-39f547a6e207 "Sample IDE View - quadrant split" =100x200)
+<img src="https://github.com/user-attachments/assets/672c7cec-d992-4bcf-8585-39f547a6e207" alt="Sample IDE View" style="width:60%; height:auto;">
 
 The most defining part of this course/ workshop is that it uses TLV programming, which is a significant abstraction above plain Verilog, where fine-grained actions were needed to code and debug.
 
@@ -45,7 +45,7 @@ riscv64-unknown-elf-objdump -d \<objfilename>.o | less
 
 Data Type representations and format specifiers:
 
-<img src="https://github.com/user-attachments/assets/11cc3a62-c639-49e1-ae8c-f208a3f0d6e6 =100x200" style="width:60%; height:auto;">
+<img src="https://github.com/user-attachments/assets/11cc3a62-c639-49e1-ae8c-f208a3f0d6e6" style="width:60%; height:auto;">
 
 **Instruction Set Architecture (ISA)**
 
@@ -65,7 +65,7 @@ RISC-V utilizes the Little-Endian memory addressing architecture at the hardware
 
 All registers have ABI Names as follows:
 
-<img src="https://github.com/user-attachments/assets/47c6275f-6d96-45b3-a1a2-3735f8b17e08 =100x200" style="width:60%; height:auto;">
+<img src="https://github.com/user-attachments/assets/47c6275f-6d96-45b3-a1a2-3735f8b17e08" style="width:60%; height:auto;">
 
 
 ## Day 3 - Digital Logic with TL-Verilog and Makerchip
