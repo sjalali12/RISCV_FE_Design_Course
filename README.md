@@ -35,6 +35,7 @@ The command used in Linux terminal to compile the C code:
   riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o \<objfilename>.o \<codefilename>.c
   
 We have used two modes of optimization for compilation namely, -O1 and -Ofast. -Ofast mode performs greater level of optimization while conversion of C to assembly.
+
 To view the compiled assembly code, use this command:
 
 riscv64-unknown-elf-objdump -d \<objfilename>.o | less
@@ -42,8 +43,9 @@ riscv64-unknown-elf-objdump -d \<objfilename>.o | less
 
 ## Day 2 - Application Binary Interface (ABI) and Verification flow
 
-Data Type representations and format specifiers
-![image](https://github.com/user-attachments/assets/11cc3a62-c639-49e1-ae8c-f208a3f0d6e6 =100x200)
+Data Type representations and format specifiers:
+
+<img src="https://github.com/user-attachments/assets/11cc3a62-c639-49e1-ae8c-f208a3f0d6e6 =100x200" style="width:60%; height:auto;">
 
 **Instruction Set Architecture (ISA)**
 
@@ -63,7 +65,7 @@ RISC-V utilizes the Little-Endian memory addressing architecture at the hardware
 
 All registers have ABI Names as follows:
 
-![image](https://github.com/user-attachments/assets/47c6275f-6d96-45b3-a1a2-3735f8b17e08 =100x200)
+<img src="https://github.com/user-attachments/assets/47c6275f-6d96-45b3-a1a2-3735f8b17e08 =100x200" style="width:60%; height:auto;">
 
 
 ## Day 3 - Digital Logic with TL-Verilog and Makerchip
@@ -141,7 +143,7 @@ Final practicals cover the following:
 
 •	Wrap-up
 
-** Advanced Directions ** 
+**Advanced Directions** 
 1.	CLOUD FPGA
 2.	FRAMEWORK FOR INTEGRATING CLOUD FPGAs as Accelerators for Web and Cloud Applications. 
 3.	Advanced capabilities in TLV
@@ -152,12 +154,12 @@ Final practicals cover the following:
 8.	WARP-V and its cloud FPGAs;  Framework called FirstCLaaS.
 
 
-** Acknowledgement ** 
+**Acknowledgement** 
 1.	Kunal Ghosh, VSD Corp. Pvt. Ltd.
 2.	Bala Dhinesh, Engineer Tenstorrent (via Github link included in Makerchip template).
 3.	Steve Hoover, Founder of Redwood EDA, LLC
 
-** References ** 
+**References** 
 1.	https://gcc.gnu.org/onlinedocs/gcc/RISC-V-Options.html
 2.	https://www.arm.com/glossary/isa
 3.	https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf
