@@ -72,7 +72,7 @@ All registers have ABI Names as follows:
 
 This introduces the Makerchip shell, and covers the Basic and advanced types of logics and Logic Blocks:
 
-<img src="https://github.com/user-attachments/assets/97700835-d0ad-44d7-b9cd-dfbe9f1b0339" style="width:60%; height:auto;">
+<img src="https://github.com/user-attachments/assets/97700835-d0ad-44d7-b9cd-dfbe9f1b0339" style="width:40%; height:auto;">
 
 The basic 7 types of Logic gates and their Truth Tables:
 
