@@ -45,7 +45,7 @@ riscv64-unknown-elf-objdump -d \<objfilename>.o | less
 Data Type representations and format specifiers
 ![image](https://github.com/user-attachments/assets/11cc3a62-c639-49e1-ae8c-f208a3f0d6e6 =100x200)
 
-** instruction Set Architecture (ISA) **
+**Instruction Set Architecture (ISA)**
 
 The ISA is an abstract interface & architectural model of the hardware (CPU) that specifies both what the processor is capable of; as well as how it gets done.
 
@@ -57,7 +57,7 @@ The ISA can be extended / customized by adding instructions or other capabilitie
 The ISA exposes at two levels - User ISA and System ISA.  Both are used by the OS.
 The applications and user programs can only use the User ISA whereas the OS provides suitable wrapper or specialized interfaces that shield the raw System ISA from harm.
 
-** Registers and Addressing **
+**Registers and Addressing**
 
 RISC-V utilizes the Little-Endian memory addressing architecture at the hardware abstraction level.
 
@@ -69,16 +69,16 @@ All registers have ABI Names as follows:
 ## Day 3 - Digital Logic with TL-Verilog and Makerchip
 
 This introduces the Makerchip shell, and covers the Basic and advanced types of logics and Logic Blocks:
-![image](https://github.com/user-attachments/assets/97700835-d0ad-44d7-b9cd-dfbe9f1b0339)
+
+<img src="https://github.com/user-attachments/assets/97700835-d0ad-44d7-b9cd-dfbe9f1b0339" style="width:60%; height:auto;">
 
 The basic 7 types of Logic gates and their Truth Tables:
-// ![image](https://github.com/user-attachments/assets/e1c33408-5b73-4b0e-b874-5423dc4991b6)
 
-<img src="https://github.com/user-attachments/assets/e1c33408-5b73-4b0e-b874-5423dc4991b6" alt="1-Cycle RISC-V CPU" style="width:50%; height:auto;">
+<img src="https://github.com/user-attachments/assets/e1c33408-5b73-4b0e-b874-5423dc4991b6" alt="1-Cycle RISC-V CPU" style="width:60%; height:auto;">
 
 Ex one of the basic building blocks of combinational logic is a 2 bit adder.  It can be used as a block to make a larger circuits (a.k. ckts).
 
-<img src="https://github.com/user-attachments/assets/183e1b2b-8cfd-4572-a48a-db1438e53807" alt="Logic Block: 2 bit adder" style="width:50%; height:auto;">
+<img src="https://github.com/user-attachments/assets/183e1b2b-8cfd-4572-a48a-db1438e53807" alt="Logic Block: 2 bit adder" style="width:60%; height:auto;">
 
 ## Day 4 - Basic RISC-V CPU design with TLV
 
@@ -87,11 +87,10 @@ Also makes deeper use of the Makerchip shell and the concepts learnt in earlier 
 
 Micro-architecture of Single Cycle RISC-V CPU is designed as:
 
-// ![image](https://github.com/user-attachments/assets/28cadc4b-903e-484a-ae8c-9af443332a45 =100x200)
-<img src="https://github.com/user-attachments/assets/28cadc4b-903e-484a-ae8c-9af443332a45" alt="1-Cycle RISC-V CPU" style="width:50%; height:auto;">
+<img src="https://github.com/user-attachments/assets/28cadc4b-903e-484a-ae8c-9af443332a45" style="width:50%; height:auto;">
 
 And further,
-![image](https://github.com/user-attachments/assets/30002149-958f-4e12-9c06-66dafa7fce69 =100x200)
+<img src="https://github.com/user-attachments/assets/30002149-958f-4e12-9c06-66dafa7fce69 =100x200" style="width:50%; height:auto;">
 
 **Shell** -- (Can call it TLV-shell, or Makerchip Shell)
 In the context of Makerchip and TL-Verilog (TLV) programming, "shell" refers to the automated scripts (likely using make or bash) that convert TLV code into a format that can be run on an actual FPGA, specifically supporting Xilinx boards with Vivado software. 
